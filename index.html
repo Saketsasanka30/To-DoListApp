@@ -3,36 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ToDo - Smart To-Do List</title>
+  <title>CyberTask - Smart To-Do List</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header-bar">
+  <header class="header-bar top-header">
     <div class="header-content">
       <div class="left-header">
         <div class="logo">
           <img src="logo.png" alt="Logo">
         </div>
         <div class="greeting" id="greeting-text">Hello!</div>
-      </div>
-
-      <div class="right-header">
-        <div class="date" id="date-display">Today is...</div>
-        <div class="stats" id="task-stats">0 tasks</div>
-        <div class="quote" id="quote-text">“Stay focused and keep shipping.”</div>
-        
-        <div class="settings-container">
-          <button class="settings-btn" id="settings-btn">⚙️</button>
-          <div id="settings-menu" class="settings-menu">
-            <button id="change-name-btn" class="change-name">Change Name</button>
-            <label class="theme-toggle" title="Toggle Light/Dark Mode">
-              <input type="checkbox" id="theme-switch">
-              <span class="slider"></span>
-            </label>
-          </div>
-        </div>
-
       </div>
     </div>
   </header>
@@ -48,6 +30,29 @@
 
     <ul id="task-list"></ul>
   </main>
+
+  <footer class="header-bar bottom-footer">
+    <div class="header-content">
+      <div class="left-footer">
+        <div class="date" id="date-display">Today is...</div>
+        <div class="stats" id="task-stats">0 tasks</div>
+        <div class="quote" id="quote-text">“Stay focused and keep shipping.”</div>
+      </div>
+
+      <div class="right-footer">
+        <div class="settings-container">
+          <button class="settings-btn" id="settings-btn">⚙️</button>
+          <div id="settings-menu" class="settings-menu">
+            <button id="change-name-btn" class="change-name">Change Name</button>
+            <label class="theme-toggle" title="Toggle Light/Dark Mode">
+              <input type="checkbox" id="theme-switch">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
