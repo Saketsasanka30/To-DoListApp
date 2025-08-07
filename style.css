@@ -25,7 +25,7 @@ body::before {
   height: 100vh;
   background: url('image.jpg') no-repeat center center fixed;
   background-size: cover;
-  opacity: 0.6;
+  opacity: 0.8;
   z-index: -2;
 }
 
@@ -130,7 +130,7 @@ body::after {
 
 /* Settings Icon and Menu */
 .settings-container {
-  position: relative; /* Changed from absolute to relative for flexibility */
+  position: relative;
   display: inline-block;
 }
 
@@ -430,15 +430,16 @@ body.light-mode .app-title {
   .settings-container {
     position: absolute;
     bottom: 50px;
-    right: 15px;
+    right: 15px; /* Keep this for mobile */
   }
 
+  /* New rule to change settings menu position for mobile */
   .settings-menu {
     top: auto;
     bottom: 50px;
     right: 10px;
-    transform: none;
     left: auto;
+    transform: none;
   }
 
   .container {
