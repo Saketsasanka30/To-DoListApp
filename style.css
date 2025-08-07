@@ -25,7 +25,7 @@ body::before {
   height: 100vh;
   background: url('image.jpg') no-repeat center center fixed;
   background-size: cover;
-  opacity: 0.6;
+  opacity: 0.8;
   z-index: -2;
 }
 
@@ -212,6 +212,7 @@ input:checked + .slider::before {
   border-radius: 20px;
   padding: 30px;
   width: 400px;
+  max-width: 90%; /* Ensure container doesn't overflow on small screens */
   box-shadow: 0 0 25px #bb86fc55, 0 0 60px #03dac544;
   backdrop-filter: blur(12px);
 }
@@ -375,4 +376,65 @@ body.light-mode .input-section input {
 
 body.light-mode .app-title {
   -webkit-text-fill-color: #222;
+}
+
+
+/* =========================
+   📱 Mobile View
+   ========================= */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  .left-header,
+  .right-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .stats, .quote, .date {
+    text-align: center;
+  }
+  
+  .settings-container {
+    margin-top: 10px;
+  }
+  
+  .settings-menu {
+    top: auto;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .app-title {
+    font-size: 1.5em;
+  }
+
+  .subtitle {
+    font-size: 0.9em;
+  }
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  #task-input {
+    width: 100%;
+  }
+
+  #add-btn {
+    width: 100%;
+  }
 }
