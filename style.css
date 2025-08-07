@@ -25,7 +25,7 @@ body::before {
   height: 100vh;
   background: url('image.jpg') no-repeat center center fixed;
   background-size: cover;
-  opacity: 0.8;
+  opacity: 0.6;
   z-index: -2;
 }
 
@@ -98,7 +98,7 @@ body::after {
   gap: 4px;
   font-size: 0.9em;
   color: #ccc;
-  position: relative; /* For settings pop-up positioning */
+  position: relative;
 }
 
 .stats {
@@ -116,6 +116,9 @@ body::after {
   display: flex;
   align-items: center;
   margin-top: 8px;
+  position: absolute; /* Position relative to .right-header */
+  top: 0;
+  right: 0;
 }
 
 .settings-btn {
@@ -133,7 +136,7 @@ body::after {
 
 .settings-menu {
   position: absolute;
-  top: 60px; /* Adjust as needed */
+  top: 40px; /* Adjust as needed */
   right: 0;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(8px);
@@ -212,7 +215,7 @@ input:checked + .slider::before {
   border-radius: 20px;
   padding: 30px;
   width: 400px;
-  max-width: 90%; /* Ensure container doesn't overflow on small screens */
+  max-width: 90%;
   box-shadow: 0 0 25px #bb86fc55, 0 0 60px #03dac544;
   backdrop-filter: blur(12px);
 }
@@ -376,4 +379,74 @@ body.light-mode .input-section input {
 
 body.light-mode .app-title {
   -webkit-text-fill-color: #222;
+}
+
+
+/* =========================
+   📱 Responsive Design
+   ========================= */
+
+/* Tablets and small desktops */
+@media (max-width: 1024px) {
+  .header-content {
+    padding: 15px 20px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .left-header {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .right-header {
+    width: 100%;
+    align-items: flex-start;
+  }
+  
+  .right-header > * {
+    margin-bottom: 4px;
+  }
+
+  .settings-container {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .settings-menu {
+    top: 50px;
+    right: 10px;
+  }
+  
+  .container {
+    width: 90%;
+    padding: 20px;
+    top: 60%;
+  }
+
+  .app-title {
+    font-size: 1.5em;
+  }
+
+  .subtitle {
+    font-size: 0.9em;
+  }
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  #task-input,
+  #add-btn {
+    width: 100%;
+  }
 }
